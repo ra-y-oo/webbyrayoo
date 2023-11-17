@@ -1,0 +1,251 @@
+:root {
+  --clr-text: #fff;
+  --clr-top-bg: #444444;
+  --clr-bg: #171717;
+  --clr-links: #DA0037;
+  --clr-yellow:#FFD369 ;
+  --clr-btn: #EDEDED;
+  --font-800: 800;
+  --font-700: 700;
+  --font-600: 600;
+  --font-400: 400;
+  --font-300: 300;
+}
+
+/* bg:#222831 
+links: #eeeeee*/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "DM Sans", sans-serif;
+}
+
+body {
+  background: var(--clr-bg);
+  color: var(--clr-text);
+}
+
+/* Reused styles */
+.container {
+  padding: 2rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.fw-800 {
+  font-weight: 800;
+}
+
+.flex-inline {
+  display: flex;
+  justify-content: space-between;
+}
+.flex-inline .button {
+  height: 24px;
+  width: 24px;
+  background: white;
+}
+.flex-inline .logo {
+  height: 50px;
+}
+
+.flex-block {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.blue-txt {
+  color: var(--clr-links);
+}
+
+.menu-btn {
+  background-color: var(--clr-top-bg);
+  border: none;
+  border-radius: 4px;
+}
+
+ul.desk-nav {
+  display: none;
+}
+
+.nav-items {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  font-weight: var(--font-700);
+  font-size: 1.2rem;
+}
+
+dialog {
+  border-radius: 1rem;
+  margin: auto;
+  border: none;
+  min-height: 150px;
+  min-width: 250px;
+  padding: 1rem;
+  background: var(--clr-btn);
+  position: relative;
+}
+dialog .nav-items {
+  padding: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+dialog .nav-items a {
+  text-decoration: none;
+  color: var(--clr-bg);
+}
+
+.btn {
+  background-color: var(--clr-btn);
+  min-height: 4rem;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  border: none;
+  border-radius: 1rem;
+  margin-top: 3rem;
+}
+.btn .btn-link {
+  color: var(--clr-bg);
+  text-decoration: none;
+  margin: 1rem;
+  font-weight: var(--font-800);
+  font-size: 1.25rem;
+}
+
+.btn:hover {
+  background: var(--clr-links);
+}
+.btn:hover .btn-link {
+  color: var(--clr-text);
+}
+
+.btn:active {
+  background: var(--clr-top-bg);
+}
+.btn:active .btn-link {
+  color: var(--clr-bg);
+}
+
+/* Hero section */
+.hero-txt {
+  font-size: 1.5rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 700px) {
+  .hero-txt {
+    max-width: 30ch;
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 1000px) {
+  .hero-txt {
+    max-width: 30ch;
+    font-size: 3rem;
+  }
+}
+.marque {
+  display: flex;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  color: var(--clr-top-bg);
+  font-size: 2rem;
+}
+.marque img {
+  max-width: 300px;
+}
+@media (min-width: 700px) {
+  .marque img {
+    min-width: 500px;
+  }
+}
+
+/* About section */
+.about {
+  max-width: 60ch;
+  font-weight: var(--font-400);
+  margin: 0 auto;
+}
+
+/* Portfolio section */
+.portfolio {
+  padding: 1rem;
+  border-bottom: var(--clr-links) solid;
+}
+
+.portfolio:hover {
+  background: var(--clr-links);
+  color: var(--clr-bg);
+}
+
+.portfolio:active {
+  background: var(--clr-links);
+  color: var(--clr-bg);
+}
+
+/* Features section */
+.card-sm {
+  border-radius: 1rem;
+  text-align: left;
+  font-weight: var(--font-800);
+  gap: 0.6rem;
+  font-size: 1.6rem;
+  background: var(--clr-top-bg);
+}
+.card-sm .icon {
+  height: 30px;
+  width: 30px;
+  background: var(--clr-btn);
+}
+
+/* Price section */
+.card {
+  border-radius: 0.8rem;
+  border: solid 1px var(--clr-btn);
+  background: var(--clr-top-bg);
+}
+.card .price {
+  font-weight: var(--font-800);
+  font-size: 2.5rem;
+}
+.card ul {
+  list-style: none;
+  margin: 2rem auto;
+  font-size: 0.8rem;
+}
+.card ul li {
+  position: relative;
+}
+.card ul li::before {
+  content: url("../images/gg_check-r.svg");
+  position: absolute;
+  left: 5px;
+}
+.card button {
+  padding: 1rem;
+  border: none;
+  border-radius: 0.4rem;
+  width: 100%;
+  margin: 1rem auto;
+}
+.card button a {
+  text-decoration: none;
+  color: var(--clr-bg);
+  font-weight: var(--font-600);
+}
+.card a {
+  color: var(--clr-links);
+}
+
+@media (min-width: 1000px) {
+  ul.desk-nav {
+    display: flex;
+  }
+  .menu-btn {
+    display: none;
+  }
+}/*# sourceMappingURL=style.css.map */

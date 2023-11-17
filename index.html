@@ -5,24 +5,131 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,600;9..40,700;9..40,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/style.css">
+    <script defer src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script defer src="./type.js"></script>
     <title>webbyrayoo</title>
 </head>
 <body>
-    <div class="soon">
-        <div class="cube-loader">
-            <div class="cube-top"></div>
-            <div class="cube-wrapper">
-            <span style="--i:0" class="cube-span"></span>
-            <span style="--i:1" class="cube-span"></span>
-            <span style="--i:2" class="cube-span"></span>
-            <span style="--i:3" class="cube-span"></span>
+    <nav>
+        <div class="flex-inline container">
+            <img src="./images/Asset 2.svg" alt="webbyrayoo logo" class="logo">
+            <button class="menu-btn" onclick="menu.showModal()" id="btn"><a href="#" class="jam-menu"><img src="./images/jam_menu.svg" alt="menu" ></a></button>
+            <ul class="desk-nav nav-items ">
+                <li>Home</li>
+                <li>Pricing</li>
+                <li>Work</li>
+                <li>FAQs</li>
+            </ul>
+        </div>
+        
+        <dialog id="menu">
+            <form method="dialog">
+                <div class="mobile-nav">
+                    <ul class="nav-items">
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="#">HOME</a></li>
+                        <li><button class="close" onclick="quote.closeModal()">
+                            <img src="./images/icon-close.svg" alt="">
+                        </button></li>
+                    </ul>
+                </div>
+            </form>
+        </dialog>
+    </nav>
+    <div class="container">
+        <div class="hero">
+            <article class="hero-txt">
+                <h1>Growing your <span class="auto-type blue-txt">passion</span> <br>through the power of good design.</h1>
+            </article>
+            <button class="btn"><a href="#" class="btn-link">See our plans</a></button>
+        </div>
+    </div>
+    <div class="marque">
+        <marquee behavior="" direction="">
+            <a class="animate" target="_blank" href="#"><img src="./images/carrentdisplay.png" alt=""></a>
+            <a class="animate" target="_blank" href="#"><img src="./images/wemadisplay.png" alt=""></a>
+            <a class="animate" target="_blank" href="#"><img src="./images/carrentdisplay.png" alt=""></a>
+            <a class="animate" target="_blank" href="#"><img src="./images/wemadisplay.png" alt=""></a>
+        </marquee>
+    </div>
+
+    <section class="container">
+        <article>
+            <h2 class="about">
+                Webbyrayoo is a creative design agency dedicated to hepling businesses reach their highest potential through impactful advertising, web design & brand work.
+            </h2>
+        </article>
+    </section>
+
+    <marquee behavior="" direction="">
+        <div class="marque marquee">
+            <h1>Discover Our Work</h1>
+            <h1>Discover Our Work</h1>
+            <h1>Discover Our Work</h1>
+            <h1>Discover Our Work</h1>
+        </div>
+    </marquee>
+
+    <section class="container">
+        <div class="portfolio container">
+            <div class="flex-inline work">
+                <h2>Wema House</h2>
+                <img src="./images/bxs_up-arrow.svg" alt="">
             </div>
         </div>
-        <div class="txt">
-           <h1>COMING SOON</h1>
+        <div class="portfolio container">
+            <div class="flex-inline work">
+                <h2>Wema House</h2>
+                <img src="./images/bxs_up-arrow.svg" alt="">
+            </div>
         </div>
-      </div>
+        <div class="portfolio container">
+            <div class="flex-inline work">
+                <h2>Wema House</h2>
+                <img src="./images/bxs_up-arrow.svg" alt="">
+            </div>
+        </div>
+        <button class="btn"><a href="#" class="btn-link">More from us</a></button>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <div class="card-sm container flex-block">
+                <div class="icon"></div>
+                <h1>Eco-friendly designs.</h1>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="container">
+        <h2>Plans for all sizes</h2>
+        <p>Simple, transparent pricing plans for you</p>
+    </div>
+
+    <section class="container pricing flex-inline">
+        <div class="flex-block">
+            <div class="card container">
+                <div class="flex-block">
+                    <img src="./images/gg_check-r.svg" class="logo" alt="">
+                    <p class="blue-txt"> Basic plan</p>
+                    <h1 class="price">$180</h1>
+                    <p>Best for individuals and small start-ups</p>
+                </div>
+                <ul class="flex-block">
+                    <li>Access to all basic features</li>
+                    <li>Access to all basic features</li>
+                    <li>Access to all basic features</li>
+                    <li>Access to all basic features</li>
+                </ul>
+                <button><a href="#">Get Started</a></button>
+                <a href="#">Book a call</a>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
