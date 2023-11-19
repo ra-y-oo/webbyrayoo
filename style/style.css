@@ -65,10 +65,9 @@ body {
   border-radius: 4px;
 }
 
-.top-nav {
+nav {
   position: sticky;
-  top: 0; /* Stick to the top of the viewport */
-  z-index: 100;
+  top: 20px;
 }
 
 ul.desk-nav {
