@@ -81,7 +81,7 @@ ul.desk-nav{
     left: 10%;
     border-radius: 2rem;
     position: absolute;
-
+    display: none;
     li a{
         text-decoration: none;
         color: var(--clr-text);
@@ -94,7 +94,6 @@ ul.desk-nav{
         text-decoration: none;
         color: var(--clr-links);
     }
-    display: none;
 }
 
 .nav-items{
@@ -341,10 +340,11 @@ dialog{
             color: var(--clr-links);
         }
     }
-}
-.popular{
+    .popular{
     box-shadow: 6px 6px 0 var(--clr-links);
+    }
 }
+
 .card:hover{
     box-shadow: 6px 6px 0 var(--clr-links);
 }
@@ -395,6 +395,19 @@ input, textarea{
     border-radius: 1rem;
 }
 
+/* Footer */
+footer{
+    a{
+        color: var(--clr-links);
+        text-decoration: none;
+    }
+    ul{
+        margin: 1rem 0;
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+    }
+}
 
 
 @media(min-width: 700px){
