@@ -25,7 +25,10 @@ body{
 }
 
 /* Reused styles */
-
+.txt-block{
+    max-width: 60ch;
+    margin: 0 auto;
+}
 .container{
     padding: 2rem;
     margin: 0 auto;
@@ -270,73 +273,73 @@ dialog{
         }
         background: var(--clr-links);
     }
-}
+}   
 /* Price section */
 .prices{
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-}
-.card{
-    border-radius: .8rem;
-    border: var(--clr-top-bg) solid;
-    background: var(--clr-bg);
-    box-shadow: 6px 6px 0 var(--clr-top-bg);
+    margin: 0 auto;
+    gap: 1.5rem;
     .free{
+            text-align: left;
+            display: flex;
+            flex-direction: column;
         .text{
             font-weight: bold;
             max-width: 30ch;
         }
-        display: flex;
-        flex-direction: column;
-        gap: .5rem;
-        padding: .5rem 1rem;
-        text-align: left;
     }
-    .tag{
-        background-color: var(--clr-links);
-        width: max-content;
-        margin: 0 auto;
-        padding: .2rem .5rem;
-        border-radius: 1rem;
-        font-size: .8rem;
-    }
-    .price{
-        font-weight: var(--font-800);
-        font-size: 2.5rem;
-        .small-txt{
-            font-size: 1rem;
+    .card{
+        min-width: 100px;
+        border-radius: .8rem;
+        border: var(--clr-top-bg) solid;
+        background: var(--clr-bg);
+        box-shadow: 6px 6px 0 var(--clr-top-bg);
+        .tag{
+            background-color: var(--clr-links);
+            width: max-content;
+            margin: 0 auto;
+            padding: .2rem .5rem;
+            border-radius: 1rem;
+            font-size: .8rem;
         }
-    }
-    ul{
-        list-style: none;
-        margin: 2rem auto;
-        font-size: .8rem;
-        li{
-            position: relative;
-            text-align: left;
+        .price{
+            font-weight: var(--font-800);
+            font-size: 2.5rem;
+            .small-txt{
+                font-size: 1rem;
+            }
         }
-        li::before{
-            content: url("../images/check_1.png");
-            position: absolute;
-            right: 5px;
+        ul{
+            list-style: none;
+            margin: 2rem auto;
+            font-size: .8rem;
+            li{
+                position: relative;
+                text-align: left;
+            }
+            li::before{
+                content: url("../images/check_1.png");
+                position: absolute;
+                right: 5px;
+            }
         }
-    }
-    button{
-        background: var(--clr-btn);
-        padding: 1rem ;
-        border: none;
-        border-radius: .4rem;
-        width: 100%;
-        margin: 1rem auto;
+        button{
+            background: var(--clr-btn);
+            padding: 1rem ;
+            border: none;
+            border-radius: .4rem;
+            width: 100%;
+            margin: 1rem auto;
+            a{
+                text-decoration: none;
+                color: var(--clr-top-bg);
+                font-weight: var(--font-600);
+            }
+        }
         a{
-            text-decoration: none;
-            color: var(--clr-top-bg);
-            font-weight: var(--font-600);
+            color: var(--clr-links);
         }
-    }
-    a{
-        color: var(--clr-links);
     }
 }
 .popular{
@@ -396,15 +399,18 @@ input, textarea{
 
 @media(min-width: 700px){
     .prices{
+        align-items: center;
         flex-direction: row;
         flex-wrap: wrap;
         gap: 2rem;
+        .free{
+            flex-direction: row;
+            justify-content: space-around;
+        }
         .card{
             min-width: 300px;
         }
-        .free{
-            max-height: 100px;
-        }
+        
     }
 
 }
@@ -413,6 +419,7 @@ input, textarea{
     .prices{
         flex-direction: row;
         gap: 2rem;
+            
     }
     ul.desk-nav{
         display: flex;
@@ -423,14 +430,5 @@ input, textarea{
     .feature{
         flex-direction: row;
     }
-    .card{
-        .free{
-            flex-direction: row;
-            max-height: max-content;
-            gap: .5rem;
-            padding: .1rem 2rem;
-            text-align: left;
-            justify-content: space-between;
-        }
-    }
+    
 }

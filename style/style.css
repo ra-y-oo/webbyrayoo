@@ -26,6 +26,11 @@ body {
 }
 
 /* Reused styles */
+.txt-block {
+  max-width: 60ch;
+  margin: 0 auto;
+}
+
 .container {
   padding: 2rem;
   margin: 0 auto;
@@ -277,27 +282,26 @@ dialog .nav-items button {
 .prices {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  margin: 0 auto;
+  gap: 1.5rem;
 }
-
-.card {
+.prices .free {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+.prices .free .text {
+  font-weight: bold;
+  max-width: 30ch;
+}
+.prices .card {
+  min-width: 100px;
   border-radius: 0.8rem;
   border: var(--clr-top-bg) solid;
   background: var(--clr-bg);
   box-shadow: 6px 6px 0 var(--clr-top-bg);
 }
-.card .free {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  padding: 0.5rem 1rem;
-  text-align: left;
-}
-.card .free .text {
-  font-weight: bold;
-  max-width: 30ch;
-}
-.card .tag {
+.prices .card .tag {
   background-color: var(--clr-links);
   width: -moz-max-content;
   width: max-content;
@@ -306,28 +310,28 @@ dialog .nav-items button {
   border-radius: 1rem;
   font-size: 0.8rem;
 }
-.card .price {
+.prices .card .price {
   font-weight: var(--font-800);
   font-size: 2.5rem;
 }
-.card .price .small-txt {
+.prices .card .price .small-txt {
   font-size: 1rem;
 }
-.card ul {
+.prices .card ul {
   list-style: none;
   margin: 2rem auto;
   font-size: 0.8rem;
 }
-.card ul li {
+.prices .card ul li {
   position: relative;
   text-align: left;
 }
-.card ul li::before {
+.prices .card ul li::before {
   content: url("../images/check_1.png");
   position: absolute;
   right: 5px;
 }
-.card button {
+.prices .card button {
   background: var(--clr-btn);
   padding: 1rem;
   border: none;
@@ -335,12 +339,12 @@ dialog .nav-items button {
   width: 100%;
   margin: 1rem auto;
 }
-.card button a {
+.prices .card button a {
   text-decoration: none;
   color: var(--clr-top-bg);
   font-weight: var(--font-600);
 }
-.card a {
+.prices .card a {
   color: var(--clr-links);
 }
 
@@ -407,15 +411,17 @@ input, textarea {
 
 @media (min-width: 700px) {
   .prices {
+    align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 2rem;
   }
+  .prices .free {
+    flex-direction: row;
+    justify-content: space-around;
+  }
   .prices .card {
     min-width: 300px;
-  }
-  .prices .free {
-    max-height: 100px;
   }
 }
 @media (min-width: 1000px) {
@@ -431,14 +437,5 @@ input, textarea {
   }
   .feature {
     flex-direction: row;
-  }
-  .card .free {
-    flex-direction: row;
-    max-height: -moz-max-content;
-    max-height: max-content;
-    gap: 0.5rem;
-    padding: 0.1rem 2rem;
-    text-align: left;
-    justify-content: space-between;
   }
 }/*# sourceMappingURL=style.css.map */
