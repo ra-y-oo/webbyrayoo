@@ -405,10 +405,21 @@ input, textarea {
   border-radius: 1rem;
 }
 
+@media (min-width: 700px) {
+  .prices {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  .prices .card {
+    min-width: 300px;
+  }
+  .prices .free {
+    max-height: 100px;
+  }
+}
 @media (min-width: 1000px) {
   .prices {
-    align-items: center;
-    justify-content: center;
     flex-direction: row;
     gap: 2rem;
   }
@@ -423,8 +434,10 @@ input, textarea {
   }
   .card .free {
     flex-direction: row;
+    max-height: -moz-max-content;
+    max-height: max-content;
     gap: 0.5rem;
-    padding: 0.5rem 1rem;
+    padding: 0.1rem 2rem;
     text-align: left;
     justify-content: space-between;
   }
