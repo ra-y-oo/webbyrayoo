@@ -347,8 +347,7 @@ dialog .nav-items button {
 .prices .card a {
   color: var(--clr-links);
 }
-
-.popular {
+.prices .popular {
   box-shadow: 6px 6px 0 var(--clr-links);
 }
 
@@ -407,6 +406,18 @@ label {
 input, textarea {
   padding: 0.5rem 1rem;
   border-radius: 1rem;
+}
+
+/* Footer */
+footer a {
+  color: var(--clr-links);
+  text-decoration: none;
+}
+footer ul {
+  margin: 1rem 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
 }
 
 @media (min-width: 700px) {
