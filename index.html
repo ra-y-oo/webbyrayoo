@@ -8,26 +8,27 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,600;9..40,700;9..40,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style/style.css">
     <script defer src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script defer src="./type.js"></script>
+    <script defer src="./animations.js"></script>
     <title>webbyrayoo</title>
 </head>
 <body>
-    <nav>
-        <div class="top-nav flex-inline container">
-            <img src="./images/logo.svg" alt="webbyrayoo logo" class="logo">
-            <button class="menu-btn" ><a href="#" class="jam-menu"><img src="./images/jam_menu.svg" alt="menu" ></a></button>       
-        </div>
-        <ul class="desk-nav nav-items ">
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">WORK</a></li>
-                    <li><a href="#">PRICING</a></li>
-                    <li><a href="#">FAQs</a></li>
-                </ul>
-    </nav>
+    <nav class="nav" id="nav">
+        <a href="#"><img src="./images/logoChristmas.svg" alt="" class="logo"></a>
+        <a class="nav-item"  href="#" onclick="toggleactivestate()">HOME</a>
+        <a class="nav-item" href="#menu-item-2">WORK</a>
+        <a class="nav-item" href="#menu-item-3">PRICING</a>
+        <a class="nav-item" href="#menu-item-4">FAQ's</a>
+        
+        <a href="javascript:void(0);" id="menu-toggle" onclick="togglemenu()">
+         <img src="./images/jam_menu.svg" alt="" class="jam_menu">
+         
+        </a>
+        <img src="./images/close.svg" alt="" class="close" onclick="togglemenu()">
+      </nav>
     <div class="container">
-        <div id="hero" class="hero">
+        <div id="menu-item-1" class="hero">
             <article class="hero-txt">
-                <h1>Elevate your <span class="auto-type blue-txt"></span> <br>through the power of good design.</h1>
+                <h1>Elevate your <br> <span class="auto-type blue-txt"></span> <br>through the power of good design.</h1>
             </article>
             <button class="btn"><a href="#" class="btn-link">See our plans</a></button>
         </div>
@@ -50,7 +51,7 @@
     </section>
 
     <marquee behavior="" direction="">
-        <div id="portfolio"  class="marque marquee">
+        <div id="menu-item-2"  class="marque marquee">
             <h1>Discover Our Work</h1>
             <h1>Discover Our Work</h1>
             <h1>Discover Our Work</h1>
@@ -60,22 +61,22 @@
 
     <section class="container">
         <div class="portfolio container">
-            <a href="#" class="flex-inline work">
+            <a href="https://wemahouse.com/" target="_blank" class="flex-inline work">
                 <h2>Wema House</h2>
                 <img class="light" src="./images/bxs_up-arrow.svg" alt="">
                 <img class="dark" src="./images/bxs_up-arrowDark.png" alt="">
             </a>
         </div>
         <div class="portfolio container">
-            <a href="#" class="flex-inline work">
+            <a href="https://www.behance.net/gallery/162109573/Carrent" target="_blank" class="flex-inline work">
                 <h2>Carrent (concept)</h2>
                 <img class="light" src="./images/bxs_up-arrow.svg" alt="">
                 <img class="dark" src="./images/bxs_up-arrowDark.png" alt="">
             </a>
         </div>
         <div class="portfolio container">
-            <a href="#" class="flex-inline work">
-                <h2>Eco-mart (concept)</h2>
+            <a href="https://www.behance.net/gallery/174931491/PLUG-EV-charger-concept" target="_blank" class="flex-inline work">
+                <h2>Plug EV (concept)</h2>
                 <img class="light" src="./images/bxs_up-arrow.svg" alt="">
                 <img class="dark" src="./images/bxs_up-arrowDark.png" alt="">
             </a>
@@ -109,7 +110,7 @@
         <p>Simple, transparent pricing plans for you</p>
     </div>
 
-    <section id="price" class="container pricing flex-inline">
+    <section id="menu-item-3" class="container pricing flex-inline">
         <div class="prices">
             <div class="card container popular">
                 <div class="flex-block">
@@ -225,7 +226,7 @@
     </marquee>
 
 
-    <section id="FAQs" class="FAQs container">
+    <section id="menu-item-4" class="FAQs container">
         <h1 class="container">Frequently Asked Questions (FAQs)</h1>
         <div class="questions flex-block txt-block">
                 <div class="question">
@@ -282,16 +283,24 @@
 
 <footer class="container">
     <div class="flex-inline">
-        <img src="./images/logo.svg" alt="" class="logo">
-        <div class="text">
+        <img src="./images/logoChristmas.svg" alt="" class="logo">
+        <div class="flex-block">
             <p>Made by <a href="#">Rayoo</a></p>
+            <div class="socials flex-inline">
+                <a href="https://www.youtube.com/channel/UCamOhZ1bfn6du3mtaxL0tYA" target="_blank"><img class="social" src="./images/icons8-youtube-94.png" alt=""></a>
+                <a href="https://www.instagram.com/webbyrayoo/" target="_blank"><img class="social" src="./images/icons8-instagram-94.png" alt=""></a>
+                <a href="https://twitter.com/_ray00_" target="_blank"><img class="social" src="./images/icons8-twitterx-100.png" alt=""></a>
+                <a href="https://www.behance.net/omororyan7967/services/" target="_blank"><img class="social" src="./images/icons8-behance-48.png" alt=""></a>
+                <a href="https://github.com/ra-y-oo" target="_blank"><img class="social" src="./images/icons8-github-375.png" alt=""></a>
+            </div>
+            
         </div>
     </div>
     <ul>
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#portfolio">Work</a></li>
-        <li><a href="#price">Pricing</a></li>
-        <li><a href="#FAQs">FAQs</a></li>
+        <li><a href="#menu-item-1">Home</a></li>
+        <li><a href="#menu-item-2">Work</a></li>
+        <li><a href="#menu-item-3">Pricing</a></li>
+        <li><a href="#menu-item-4">FAQs</a></li>
     </ul>
 
 </footer>
