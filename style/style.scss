@@ -72,11 +72,10 @@ a{
 
 .nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     position: sticky;
     top: 0;
-    padding: .3rem .5rem;
     overflow: hidden; 
     z-index: 1;
     .nav-item:hover{
@@ -102,7 +101,10 @@ a{
   .nav #menu-toggle {
     display: none; }
   @media screen and (max-width: 600px) {
-    
+    .nav{
+        justify-content: space-between;
+        padding: .3rem 1rem;
+    }
     .nav a:not(:first-child) {
       display: none; }
     .nav a#menu-toggle {
