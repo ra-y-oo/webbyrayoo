@@ -78,6 +78,10 @@ a{
     top: 0;
     overflow: hidden; 
     z-index: 1;
+    background: rgba(33, 33, 33, 0.50);
+    border-radius: 1rem;
+    max-width: 80%;
+    margin: 1rem auto;
     .nav-item:hover{
         color: var(--clr-links);
     }
@@ -88,6 +92,8 @@ a{
         width: 2rem;
         height: 2rem;
     }
+
+    transition: 500ms;
 }
   .nav a {
     color: var(--clr-text);
@@ -113,7 +119,7 @@ a{
     .nav.nav--open {
       position: sticky; 
       top: 3rem;
-      background: #222222;
+      background: rgba(33, 33, 33, 0.70);
       flex-direction: column;
       border-radius: 1rem;
       margin: 2rem;
@@ -147,6 +153,7 @@ dialog{
     border: none;
     border-radius: 1rem;
     margin-top: 3rem;
+    transition: 500ms ease-in-out;
     .btn-link{
         color: var(--clr-text);
         text-decoration: none;
@@ -158,6 +165,7 @@ dialog{
 
 .btn:hover{
     background: var(--clr-btn);
+    transform: scale(110%);
     .btn-link{
         color: var(--clr-bg);
     }
@@ -165,6 +173,7 @@ dialog{
 
 .btn:active{
     background: var(--clr-top-bg);
+    transform: scale(110%);
     .btn-link{
         color: var(--clr-bg);
     }
@@ -217,6 +226,7 @@ dialog{
 .portfolio{
     padding: 1rem;
     border-bottom: var(--clr-links) solid;
+    text-align: left;
     a{
         text-decoration: none;
         color: var(--clr-text);
@@ -362,6 +372,7 @@ dialog{
     color: var(--clr-links);
     padding: .5rem 1rem;
     font-weight: var(--font-700);
+    transition: 500ms ease-in-out;
 }
 .answer{
     font-size: .8rem;
@@ -404,6 +415,7 @@ footer{
         max-width: 2rem;
         max-height: 2rem;
         padding: .1rem .3rem;
+        transition: 500ms ease-in-out;
     }
     .social:hover{
         background-color: var(--clr-links);
